@@ -17,6 +17,11 @@
 #define SIM_CMD_NUM_THREADS     12
 #define SIM_CMD_NAMED_MARKER    13
 #define SIM_CMD_SET_THREAD_NAME 14
+//AMHM Start
+#define AMHM_APPROX             15
+#define AMHM_QUAL               16
+#define AMHM_ACCURATE           17
+//AMHM End
 
 #define SIM_OPT_INSTRUMENT_DETAILED    0
 #define SIM_OPT_INSTRUMENT_WARMUP      1
@@ -74,21 +79,26 @@
 })
 
 
-#define SimRoiStart()             SimMagic0(SIM_CMD_ROI_START)
-#define SimRoiEnd()               SimMagic0(SIM_CMD_ROI_END)
-#define SimGetProcId()            SimMagic0(SIM_CMD_PROC_ID)
-#define SimGetThreadId()          SimMagic0(SIM_CMD_THREAD_ID)
-#define SimSetThreadName(name)    SimMagic1(SIM_CMD_SET_THREAD_NAME, (unsigned long)(name))
-#define SimGetNumProcs()          SimMagic0(SIM_CMD_NUM_PROCS)
-#define SimGetNumThreads()        SimMagic0(SIM_CMD_NUM_THREADS)
-#define SimSetFreqMHz(proc, mhz)  SimMagic2(SIM_CMD_MHZ_SET, proc, mhz)
-#define SimSetOwnFreqMHz(mhz)     SimSetFreqMHz(SimGetProcId(), mhz)
-#define SimGetFreqMHz(proc)       SimMagic1(SIM_CMD_MHZ_GET, proc)
-#define SimGetOwnFreqMHz()        SimGetFreqMHz(SimGetProcId())
-#define SimMarker(arg0, arg1)     SimMagic2(SIM_CMD_MARKER, arg0, arg1)
-#define SimNamedMarker(arg0, str) SimMagic2(SIM_CMD_NAMED_MARKER, arg0, (unsigned long)(str))
-#define SimUser(cmd, arg)         SimMagic2(SIM_CMD_USER, cmd, arg)
-#define SimSetInstrumentMode(opt) SimMagic1(SIM_CMD_INSTRUMENT_MODE, opt)
-#define SimInSimulator()          (SimMagic0(SIM_CMD_IN_SIMULATOR)!=SIM_CMD_IN_SIMULATOR)
+#define SimRoiStart()                       SimMagic0(SIM_CMD_ROI_START)
+#define SimRoiEnd()                         SimMagic0(SIM_CMD_ROI_END)
+#define SimGetProcId()                      SimMagic0(SIM_CMD_PROC_ID)
+#define SimGetThreadId()                    SimMagic0(SIM_CMD_THREAD_ID)
+#define SimSetThreadName(name)              SimMagic1(SIM_CMD_SET_THREAD_NAME, (unsigned long)(name))
+#define SimGetNumProcs()                    SimMagic0(SIM_CMD_NUM_PROCS)
+#define SimGetNumThreads()                  SimMagic0(SIM_CMD_NUM_THREADS)
+#define SimSetFreqMHz(proc, mhz)            SimMagic2(SIM_CMD_MHZ_SET, proc, mhz)
+#define SimSetOwnFreqMHz(mhz)               SimSetFreqMHz(SimGetProcId(), mhz)
+#define SimGetFreqMHz(proc)                 SimMagic1(SIM_CMD_MHZ_GET, proc)
+#define SimGetOwnFreqMHz()                  SimGetFreqMHz(SimGetProcId())
+#define SimMarker(arg0, arg1)               SimMagic2(SIM_CMD_MARKER, arg0, arg1)
+//AMHM Start
+#define AMHM_approx(arg0, arg1)             SimMagic2(AMHM_APPROX, arg0, arg1)
+#define AMHM_qual(arg0)                     SimMagic1(AMHM_QUAL, arg0)
+#define AMHM_accurate(arg0)                 SimMagic1(AMHM_ACCURATE, arg0)
+//AMHM End
+#define SimNamedMarker(arg0, str)           SimMagic2(SIM_CMD_NAMED_MARKER, arg0, (unsigned long)(str))
+#define SimUser(cmd, arg)                   SimMagic2(SIM_CMD_USER, cmd, arg)
+#define SimSetInstrumentMode(opt)           SimMagic1(SIM_CMD_INSTRUMENT_MODE, opt)
+#define SimInSimulator()                    (SimMagic0(SIM_CMD_IN_SIMULATOR)!=SIM_CMD_IN_SIMULATOR)
 
 #endif /* __SIM_API */

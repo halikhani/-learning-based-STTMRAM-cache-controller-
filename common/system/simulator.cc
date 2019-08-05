@@ -148,6 +148,15 @@ void Simulator::start()
    }
 
    m_running = true;
+   
+   //AMHM Start
+   approx_table_entry = -1;
+   for( int i = 0; i < approx_table_max_entry; i++) {
+       approx_table[i].start_address = 0;
+       approx_table[i].end_address = 0;
+       approx_table[i].quality_level = 0;
+   }
+   //AMHM End
 }
 
 Simulator::~Simulator()
@@ -207,6 +216,28 @@ Simulator::~Simulator()
    delete m_transport;                 m_transport = NULL;
    delete m_stats_manager;             m_stats_manager = NULL;
 }
+//AMHM Start
+int Simulator::approx_table_search(unsigned long long start_address) {
+    start_address = start_address + 0xD0;
+    start_address = start_address & 0xFFFFFFFFFFC0;
+    //printf("AMHM: Start Address Fed to search table: 0x%llx\n", start_address);
+    for(int i = 0; i < approx_table_max_entry; i++){
+               if(start_address == approx_table[i].start_address) {
+                   //printf("AMHM: Start Address %d in table: 0x%llx\n", i, Sim()->approx_table[i].start_address);
+                   return i;
+               }
+    }
+    return -1;
+}
+
+float Simulator::get_error_rate(IntPtr address) {
+    //printf("AMHM: Start Address Fed to search table: 0x%llx\n", start_address);
+    for(int i = 0; i < approx_table_max_entry; i++)
+               if((address >= (IntPtr) approx_table[i].start_address) && (address <= (IntPtr) approx_table[i].end_address))
+                   return approx_table[i].quality_level;
+    return 0;
+}
+//AMHM End
 
 void Simulator::enablePerformanceModels()
 {

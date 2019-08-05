@@ -1,0 +1,1793 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="common">
+        <df name="config">
+          <in>config.cpp</in>
+          <in>config_file.cpp</in>
+          <in>key.cpp</in>
+          <in>section.cpp</in>
+        </df>
+        <df name="core">
+          <df name="memory_subsystem">
+            <df name="cache">
+              <in>cache.cc</in>
+              <in>cache_base.cc</in>
+              <in>cache_block_info.cc</in>
+              <in>cache_set.cc</in>
+              <in>cache_set_lru.cc</in>
+              <in>cache_set_mru.cc</in>
+              <in>cache_set_nmru.cc</in>
+              <in>cache_set_nru.cc</in>
+              <in>cache_set_plru.cc</in>
+              <in>cache_set_random.cc</in>
+              <in>cache_set_round_robin.cc</in>
+              <in>cache_set_srrip.cc</in>
+              <in>pr_l2_cache_block_info.cc</in>
+              <in>shared_cache_block_info.cc</in>
+            </df>
+            <df name="cheetah">
+              <in>cheetah_manager.cc</in>
+              <in>cheetah_model.cc</in>
+              <in>saclru.cc</in>
+              <in>util.cc</in>
+            </df>
+            <df name="directory_schemes">
+              <in>directory.cc</in>
+            </df>
+            <df name="dram">
+              <in>dram_cache.cc</in>
+              <in>dram_cntlr_interface.cc</in>
+            </df>
+            <df name="fast_nehalem">
+              <in>memory_manager.cc</in>
+            </df>
+            <df name="parametric_dram_directory_msi">
+              <in>cache_atd.cc</in>
+              <in>cache_cntlr.cc</in>
+              <in>ghb_prefetcher.cc</in>
+              <in>memory_manager.cc</in>
+              <in>nuca_cache.cc</in>
+              <in>prefetcher.cc</in>
+              <in>simple_prefetcher.cc</in>
+              <in>tlb.cc</in>
+            </df>
+            <df name="pr_l1_pr_l2_dram_directory_msi">
+              <in>dram_cntlr.cc</in>
+              <in>dram_directory_cache.cc</in>
+              <in>dram_directory_cntlr.cc</in>
+              <in>shmem_msg.cc</in>
+              <in>shmem_perf.cc</in>
+              <in>shmem_req.cc</in>
+            </df>
+            <in>address_home_lookup.cc</in>
+            <in>mem_component.cc</in>
+            <in>memory_manager_base.cc</in>
+          </df>
+          <in>bbv_count.cc</in>
+          <in>core.cc</in>
+          <in>syscall_model.cc</in>
+          <in>thread.cc</in>
+          <in>topology_info.cc</in>
+        </df>
+        <df name="fault_injection">
+          <in>fault_injection.cc</in>
+          <in>fault_injector_random.cc</in>
+        </df>
+        <df name="misc">
+          <in>barrier.cc</in>
+          <in>basic_hash.cc</in>
+          <in>bit_vector.cc</in>
+          <in>bottlegraph.cc</in>
+          <in>callstack.cc</in>
+          <in>checksum.cc</in>
+          <in>circular_log.cc</in>
+          <in>cond.cc</in>
+          <in>config.cc</in>
+          <in>fxsupport.cc</in>
+          <in>handle_args.cc</in>
+          <in>locked_hash.cc</in>
+          <in>lockfree_hash.cc</in>
+          <in>log.cc</in>
+          <in>logmem.cc</in>
+          <in>memguard.cc</in>
+          <in>modulo_num.cc</in>
+          <in>packetize.cc</in>
+          <in>progress.cc</in>
+          <in>pthread_lock.cc</in>
+          <in>pthread_thread.cc</in>
+          <in>pthread_tls.cc</in>
+          <in>selock.cc</in>
+          <in>semaphore.cc</in>
+          <in>setlock.cc</in>
+          <in>spin_loop_detector.cc</in>
+          <in>stats.cc</in>
+          <in>subsecond_time.cc</in>
+          <in>subsecond_time_c.cc</in>
+          <in>syscall_strings.cc</in>
+          <in>tags.cc</in>
+          <in>timer.cc</in>
+          <in>tls.cc</in>
+          <in>utils.cc</in>
+        </df>
+        <df name="network">
+          <in>network.cc</in>
+          <in>network_model.cc</in>
+          <in>network_model_bus.cc</in>
+          <in>network_model_emesh_hop_by_hop.cc</in>
+          <in>network_model_emesh_hop_counter.cc</in>
+          <in>network_model_magic.cc</in>
+          <in>packet_type.cc</in>
+        </df>
+        <df name="performance_model">
+          <df name="branch_predictors">
+            <in>branch_predictor_return_value.cc</in>
+            <in>one_bit_branch_predictor.cc</in>
+            <in>pentium_m_branch_predictor.cc</in>
+          </df>
+          <df name="instruction_tracers">
+            <in>instruction_tracer.cc</in>
+            <in>instruction_tracer_fpstats.cc</in>
+            <in>instruction_tracer_print.cc</in>
+            <in>loop_profiler.cc</in>
+            <in>loop_tracer.cc</in>
+          </df>
+          <df name="performance_models">
+            <df name="core_model">
+              <in>core_model.cc</in>
+              <in>core_model_nehalem.cc</in>
+              <in>dynamic_micro_op_nehalem.cc</in>
+            </df>
+            <df name="interval_performance_model">
+              <in>interval_contention_nehalem.cc</in>
+              <in>interval_timer.cc</in>
+              <in>windows.cc</in>
+            </df>
+            <df name="micro_op">
+              <in>dynamic_micro_op.cc</in>
+              <in>instruction_decoder.cc</in>
+              <in>memory_dependencies.cc</in>
+              <in>micro_op.cc</in>
+              <in>register_dependencies.cc</in>
+            </df>
+            <df name="rob_performance_model">
+              <in>rob_contention_nehalem.cc</in>
+              <in>rob_smt_timer.cc</in>
+              <in>rob_timer.cc</in>
+              <in>smt_timer.cc</in>
+            </df>
+            <in>interval_performance_model.cc</in>
+            <in>micro_op_performance_model.cc</in>
+            <in>oneipc_performance_model.cc</in>
+            <in>rob_performance_model.cc</in>
+            <in>rob_smt_performance_model.cc</in>
+          </df>
+          <in>branch_predictor.cc</in>
+          <in>cache_perf_model.cc</in>
+          <in>contention_model.cc</in>
+          <in>dram_directory_perf_model_base.cc</in>
+          <in>dram_perf_model.cc</in>
+          <in>dram_perf_model_constant.cc</in>
+          <in>dram_perf_model_normal.cc</in>
+          <in>dram_perf_model_readwrite.cc</in>
+          <in>dynamic_instruction.cc</in>
+          <in>fastforward_performance_model.cc</in>
+          <in>hit_where.cc</in>
+          <in>instruction.cc</in>
+          <in>mmu_perf_model_base.cc</in>
+          <in>performance_model.cc</in>
+          <in>queue_model.cc</in>
+          <in>queue_model_basic.cc</in>
+          <in>queue_model_contention.cc</in>
+          <in>queue_model_history_list.cc</in>
+          <in>queue_model_windowed_mg1.cc</in>
+          <in>shmem_perf_model.cc</in>
+        </df>
+        <df name="sampling">
+          <in>periodic_sampling.cc</in>
+          <in>sampling_algorithm.cc</in>
+          <in>sampling_manager.cc</in>
+          <in>sampling_provider.cc</in>
+        </df>
+        <df name="scheduler">
+          <in>scheduler.cc</in>
+          <in>scheduler_big_small.cc</in>
+          <in>scheduler_dynamic.cc</in>
+          <in>scheduler_pinned.cc</in>
+          <in>scheduler_pinned_base.cc</in>
+          <in>scheduler_roaming.cc</in>
+          <in>scheduler_sequential.cc</in>
+          <in>scheduler_static.cc</in>
+        </df>
+        <df name="scripting">
+          <in>hooks_py.cc</in>
+          <in>py_bbv.cc</in>
+          <in>py_config.cc</in>
+          <in>py_control.cc</in>
+          <in>py_dvfs.cc</in>
+          <in>py_hooks.cc</in>
+          <in>py_mem.cc</in>
+          <in>py_stats.cc</in>
+          <in>py_thread.cc</in>
+        </df>
+        <df name="system">
+          <in>barrier_sync_client.cc</in>
+          <in>barrier_sync_server.cc</in>
+          <in>clock_skew_minimization_object.cc</in>
+          <in>core_manager.cc</in>
+          <in>core_thread.cc</in>
+          <in>dvfs_manager.cc</in>
+          <in>fastforward_performance_manager.cc</in>
+          <in>hooks_manager.cc</in>
+          <in>hooks_manager_init.cc</in>
+          <in>inst_mode.cc</in>
+          <in>magic_client.cc</in>
+          <in>magic_server.cc</in>
+          <in>memory_tracker.cc</in>
+          <in>pthread_emu.cc</in>
+          <in>routine_tracer.cc</in>
+          <in>routine_tracer_funcstats.cc</in>
+          <in>routine_tracer_ondemand.cc</in>
+          <in>routine_tracer_print.cc</in>
+          <in>sim_thread.cc</in>
+          <in>sim_thread_manager.cc</in>
+          <in>simulator.cc</in>
+          <in>sync_client.cc</in>
+          <in>sync_server.cc</in>
+          <in>syscall_server.cc</in>
+          <in>thread_manager.cc</in>
+          <in>thread_stats_manager.cc</in>
+        </df>
+        <df name="trace_frontend">
+          <in>trace_manager.cc</in>
+          <in>trace_thread.cc</in>
+        </df>
+        <df name="transport">
+          <in>smtransport.cc</in>
+          <in>transport.cc</in>
+        </df>
+        <df name="user">
+          <in>sync_api.cc</in>
+        </df>
+      </df>
+      <df name="pin">
+        <df name="follow_execv">
+          <in>follow_execv.cc</in>
+        </df>
+        <df name="lite">
+          <in>handle_syscalls.cc</in>
+          <in>memory_modeling.cc</in>
+          <in>routine_replace.cc</in>
+        </df>
+        <in>codecache_trace.cc</in>
+        <in>inst_mode.cc</in>
+        <in>instruction_modeling.cc</in>
+        <in>local_storage.cc</in>
+        <in>pin_exceptions.cc</in>
+        <in>pin_lock.cc</in>
+        <in>pin_sim.cc</in>
+        <in>pin_thread.cc</in>
+        <in>pin_tls.cc</in>
+        <in>spin_loop_detection.cc</in>
+        <in>toolreg.cc</in>
+        <in>trace_rtn.cc</in>
+      </df>
+      <df name="sift">
+        <df name="recorder">
+          <in>bbv_count.cc</in>
+          <in>emulation.cc</in>
+          <in>globals.cc</in>
+          <in>papi.cc</in>
+          <in>pinboost_debug.cc</in>
+          <in>recorder_base.cc</in>
+          <in>recorder_control.cc</in>
+          <in>sift_recorder.cc</in>
+          <in>syscall_modeling.cc</in>
+          <in>threads.cc</in>
+          <in>trace_rtn.cc</in>
+        </df>
+        <in>sift_reader.cc</in>
+        <in>sift_utils.cc</in>
+        <in>sift_writer.cc</in>
+        <in>siftdump.cc</in>
+        <in>zfstream.cc</in>
+      </df>
+      <df name="standalone">
+        <in>exceptions.cc</in>
+        <in>standalone.cc</in>
+      </df>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+      <itemPath>nbproject/private/launcher.properties</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <flagsDictionary>
+        <element flagsID="0" commonFlags="-O2 -fPIC -O3 -fPIC -std=c++0x -O2"/>
+        <element flagsID="1" commonFlags="-O2 -fPIC -std=c++0x -O2"/>
+        <element flagsID="2" commonFlags="-fPIC -std=c++0x -O2"/>
+        <element flagsID="3"
+                 commonFlags="-fPIC -std=c++0x -O2 -fPIC -std=c++0x -O2 -fPIC"/>
+        <element flagsID="4"
+                 commonFlags="-fPIC -std=c++0x -O2 -std=c++0x -O2 -fPIC -O3 -fPIC -std=c++0x -O2"/>
+      </flagsDictionary>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath></executablePath>
+          <ccTool>
+            <preprocessorList>
+              <Elem>PIN_REV=71313</Elem>
+              <Elem>TARGET_INTEL64</Elem>
+            </preprocessorList>
+          </ccTool>
+        </makeTool>
+        <preBuild>
+          <preBuildCommandWorkingDir>.</preBuildCommandWorkingDir>
+          <preBuildCommand></preBuildCommand>
+        </preBuild>
+      </makefileType>
+      <item path="common/config/config.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/config/config_file.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/config/key.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/config/section.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/core/bbv_count.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/core/core.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/core/memory_subsystem/address_home_lookup.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/core/memory_subsystem/cache/cache.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/core/memory_subsystem/cache/cache_base.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/core/memory_subsystem/cache/cache_block_info.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/core/memory_subsystem/cache/cache_set.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/core/memory_subsystem/cache/cache_set_lru.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/core/memory_subsystem/cache/cache_set_mru.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/core/memory_subsystem/cache/cache_set_nmru.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/core/memory_subsystem/cache/cache_set_nru.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/core/memory_subsystem/cache/cache_set_plru.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/core/memory_subsystem/cache/cache_set_random.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/core/memory_subsystem/cache/cache_set_round_robin.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/core/memory_subsystem/cache/cache_set_srrip.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/core/memory_subsystem/cache/pr_l2_cache_block_info.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/core/memory_subsystem/cache/shared_cache_block_info.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/core/memory_subsystem/cheetah/cheetah_manager.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/core/memory_subsystem/cheetah/cheetah_model.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/core/memory_subsystem/cheetah/saclru.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/core/memory_subsystem/cheetah/util.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/core/memory_subsystem/directory_schemes/directory.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/core/memory_subsystem/dram/dram_cache.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/core/memory_subsystem/dram/dram_cntlr_interface.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/core/memory_subsystem/fast_nehalem/memory_manager.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/core/memory_subsystem/mem_component.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/core/memory_subsystem/memory_manager_base.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/core/memory_subsystem/parametric_dram_directory_msi/cache_atd.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/core/memory_subsystem/parametric_dram_directory_msi/cache_cntlr.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/core/memory_subsystem/parametric_dram_directory_msi/ghb_prefetcher.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/core/memory_subsystem/parametric_dram_directory_msi/memory_manager.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/core/memory_subsystem/parametric_dram_directory_msi/nuca_cache.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/core/memory_subsystem/parametric_dram_directory_msi/prefetcher.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/core/memory_subsystem/parametric_dram_directory_msi/simple_prefetcher.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/core/memory_subsystem/parametric_dram_directory_msi/tlb.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/core/memory_subsystem/pr_l1_pr_l2_dram_directory_msi/dram_cntlr.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/core/memory_subsystem/pr_l1_pr_l2_dram_directory_msi/dram_directory_cache.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/core/memory_subsystem/pr_l1_pr_l2_dram_directory_msi/dram_directory_cntlr.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/core/memory_subsystem/pr_l1_pr_l2_dram_directory_msi/shmem_msg.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/core/memory_subsystem/pr_l1_pr_l2_dram_directory_msi/shmem_perf.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/core/memory_subsystem/pr_l1_pr_l2_dram_directory_msi/shmem_req.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/core/syscall_model.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/core/thread.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/core/topology_info.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/fault_injection/fault_injection.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/fault_injection/fault_injector_random.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/misc/barrier.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/misc/basic_hash.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/misc/bit_vector.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/misc/bottlegraph.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/misc/callstack.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/misc/checksum.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/misc/circular_log.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/misc/cond.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/misc/config.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/misc/fxsupport.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/misc/handle_args.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/misc/locked_hash.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/misc/lockfree_hash.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/misc/log.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/misc/logmem.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/misc/memguard.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/misc/modulo_num.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/misc/packetize.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/misc/progress.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/misc/pthread_lock.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/misc/pthread_thread.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/misc/pthread_tls.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/misc/selock.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/misc/semaphore.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/misc/setlock.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/misc/spin_loop_detector.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/misc/stats.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/misc/subsecond_time.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/misc/subsecond_time_c.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/misc/syscall_strings.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/misc/tags.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/misc/timer.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/misc/tls.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/misc/utils.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/network/network.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/network/network_model.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/network/network_model_bus.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/network/network_model_emesh_hop_by_hop.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/network/network_model_emesh_hop_counter.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/network/network_model_magic.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/network/packet_type.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/branch_predictor.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/branch_predictors/branch_predictor_return_value.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/branch_predictors/one_bit_branch_predictor.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/branch_predictors/pentium_m_branch_predictor.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/cache_perf_model.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/contention_model.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/dram_directory_perf_model_base.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/dram_perf_model.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/dram_perf_model_constant.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/dram_perf_model_normal.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/dram_perf_model_readwrite.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/dynamic_instruction.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/fastforward_performance_model.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/hit_where.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/instruction.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/instruction_tracers/instruction_tracer.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/instruction_tracers/instruction_tracer_fpstats.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/instruction_tracers/instruction_tracer_print.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/instruction_tracers/loop_profiler.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/instruction_tracers/loop_tracer.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/mmu_perf_model_base.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/performance_model.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/performance_models/core_model/core_model.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/performance_models/core_model/core_model_nehalem.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/performance_models/core_model/dynamic_micro_op_nehalem.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/performance_models/interval_performance_model.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/performance_models/interval_performance_model/interval_contention_nehalem.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/performance_models/interval_performance_model/interval_timer.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/performance_models/interval_performance_model/windows.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/performance_models/micro_op/dynamic_micro_op.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/performance_models/micro_op/instruction_decoder.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/performance_models/micro_op/memory_dependencies.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/performance_models/micro_op/micro_op.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/performance_models/micro_op/register_dependencies.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/performance_models/micro_op_performance_model.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/performance_models/oneipc_performance_model.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/performance_models/rob_performance_model.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/performance_models/rob_performance_model/rob_contention_nehalem.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/performance_models/rob_performance_model/rob_smt_timer.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/performance_models/rob_performance_model/rob_timer.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/performance_models/rob_performance_model/smt_timer.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/performance_models/rob_smt_performance_model.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/queue_model.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/queue_model_basic.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/queue_model_contention.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/queue_model_history_list.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/queue_model_windowed_mg1.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/performance_model/shmem_perf_model.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/sampling/periodic_sampling.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/sampling/sampling_algorithm.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/sampling/sampling_manager.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/sampling/sampling_provider.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/scheduler/scheduler.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/scheduler/scheduler_big_small.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/scheduler/scheduler_dynamic.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/scheduler/scheduler_pinned.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/scheduler/scheduler_pinned_base.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/scheduler/scheduler_roaming.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/scheduler/scheduler_sequential.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/scheduler/scheduler_static.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/scripting/hooks_py.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/scripting/py_bbv.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/scripting/py_config.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/scripting/py_control.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/scripting/py_dvfs.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/scripting/py_hooks.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/scripting/py_mem.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/scripting/py_stats.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/scripting/py_thread.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/system/barrier_sync_client.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/system/barrier_sync_server.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/system/clock_skew_minimization_object.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/system/core_manager.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/system/core_thread.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/system/dvfs_manager.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/system/fastforward_performance_manager.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/system/hooks_manager.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/system/hooks_manager_init.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/system/inst_mode.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/system/magic_client.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/system/magic_server.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/system/memory_tracker.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/system/pthread_emu.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/system/routine_tracer.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/system/routine_tracer_funcstats.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/system/routine_tracer_ondemand.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/system/routine_tracer_print.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/system/sim_thread.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/system/sim_thread_manager.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/system/simulator.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/system/sync_client.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/system/sync_server.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/system/syscall_server.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/system/thread_manager.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/system/thread_stats_manager.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/trace_frontend/trace_manager.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/trace_frontend/trace_thread.cc"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/transport/smtransport.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/transport/transport.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <item path="common/user/sync_api.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="2">
+        </ccTool>
+      </item>
+      <folder path="0/common">
+        <ccTool>
+          <incDir>
+            <pElem>common</pElem>
+            <pElem>common/user</pElem>
+            <pElem>common/sampling</pElem>
+            <pElem>common/core</pElem>
+            <pElem>common/core/memory_subsystem</pElem>
+            <pElem>common/core/memory_subsystem/cheetah</pElem>
+            <pElem>common/core/memory_subsystem/dram</pElem>
+            <pElem>common/core/memory_subsystem/directory_schemes</pElem>
+            <pElem>common/core/memory_subsystem/cache</pElem>
+            <pElem>common/core/memory_subsystem/fast_nehalem</pElem>
+            <pElem>common/core/memory_subsystem/pr_l1_pr_l2_dram_directory_msi</pElem>
+            <pElem>common/core/memory_subsystem/parametric_dram_directory_msi</pElem>
+            <pElem>common/scheduler</pElem>
+            <pElem>common/scripting</pElem>
+            <pElem>common/network</pElem>
+            <pElem>common/system</pElem>
+            <pElem>common/performance_model</pElem>
+            <pElem>common/performance_model/performance_models</pElem>
+            <pElem>common/performance_model/performance_models/rob_performance_model</pElem>
+            <pElem>common/performance_model/performance_models/core_model</pElem>
+            <pElem>common/performance_model/performance_models/micro_op</pElem>
+            <pElem>common/performance_model/performance_models/interval_performance_model</pElem>
+            <pElem>common/performance_model/branch_predictors</pElem>
+            <pElem>common/performance_model/instruction_tracers</pElem>
+            <pElem>common/fault_injection</pElem>
+            <pElem>common/misc</pElem>
+            <pElem>common/config</pElem>
+            <pElem>common/transport</pElem>
+            <pElem>common/trace_frontend</pElem>
+            <pElem>include</pElem>
+            <pElem>pin_kit/extras/xed-intel64/include</pElem>
+            <pElem>pin_kit/extras/xed2-intel64/include</pElem>
+            <pElem>linux</pElem>
+            <pElem>sift</pElem>
+            <pElem>python_kit/intel64/include/python2.7</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="0/pin">
+        <ccTool>
+          <incDir>
+            <pElem>pin</pElem>
+            <pElem>pin/follow_execv</pElem>
+            <pElem>pin/lite</pElem>
+            <pElem>common</pElem>
+            <pElem>common/user</pElem>
+            <pElem>common/sampling</pElem>
+            <pElem>common/core</pElem>
+            <pElem>common/core/memory_subsystem</pElem>
+            <pElem>common/core/memory_subsystem/cheetah</pElem>
+            <pElem>common/core/memory_subsystem/dram</pElem>
+            <pElem>common/core/memory_subsystem/directory_schemes</pElem>
+            <pElem>common/core/memory_subsystem/cache</pElem>
+            <pElem>common/core/memory_subsystem/fast_nehalem</pElem>
+            <pElem>common/core/memory_subsystem/pr_l1_pr_l2_dram_directory_msi</pElem>
+            <pElem>common/core/memory_subsystem/parametric_dram_directory_msi</pElem>
+            <pElem>common/scheduler</pElem>
+            <pElem>common/scripting</pElem>
+            <pElem>common/network</pElem>
+            <pElem>common/system</pElem>
+            <pElem>common/performance_model</pElem>
+            <pElem>common/performance_model/performance_models</pElem>
+            <pElem>common/performance_model/performance_models/rob_performance_model</pElem>
+            <pElem>common/performance_model/performance_models/core_model</pElem>
+            <pElem>common/performance_model/performance_models/micro_op</pElem>
+            <pElem>common/performance_model/performance_models/interval_performance_model</pElem>
+            <pElem>common/performance_model/branch_predictors</pElem>
+            <pElem>common/performance_model/instruction_tracers</pElem>
+            <pElem>common/fault_injection</pElem>
+            <pElem>common/misc</pElem>
+            <pElem>common/config</pElem>
+            <pElem>common/transport</pElem>
+            <pElem>common/trace_frontend</pElem>
+            <pElem>include</pElem>
+            <pElem>pin_kit/extras/xed-intel64/include</pElem>
+            <pElem>pin_kit/extras/xed2-intel64/include</pElem>
+            <pElem>linux</pElem>
+            <pElem>sift</pElem>
+            <pElem>python_kit/intel64/include/python2.7</pElem>
+            <pElem>pin_kit/source/include/pin</pElem>
+            <pElem>pin_kit/source/include/pin/gen</pElem>
+            <pElem>pin_kit/extras/components/include</pElem>
+            <pElem>pin_kit/source/tools/InstLib</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>BIGARRAY_MULTIPLIER=1</Elem>
+            <Elem>HOST_IA32E</Elem>
+            <Elem>TARGET_IA32E</Elem>
+            <Elem>TARGET_LINUX</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <folder path="0/sift">
+        <ccTool>
+          <incDir>
+            <pElem>common</pElem>
+            <pElem>common/user</pElem>
+            <pElem>common/sampling</pElem>
+            <pElem>common/core</pElem>
+            <pElem>common/core/memory_subsystem</pElem>
+            <pElem>common/core/memory_subsystem/cheetah</pElem>
+            <pElem>common/core/memory_subsystem/dram</pElem>
+            <pElem>common/core/memory_subsystem/directory_schemes</pElem>
+            <pElem>common/core/memory_subsystem/cache</pElem>
+            <pElem>common/core/memory_subsystem/fast_nehalem</pElem>
+            <pElem>common/core/memory_subsystem/pr_l1_pr_l2_dram_directory_msi</pElem>
+            <pElem>common/core/memory_subsystem/parametric_dram_directory_msi</pElem>
+            <pElem>common/scheduler</pElem>
+            <pElem>common/scripting</pElem>
+            <pElem>common/network</pElem>
+            <pElem>common/system</pElem>
+            <pElem>common/performance_model</pElem>
+            <pElem>common/performance_model/performance_models</pElem>
+            <pElem>common/performance_model/performance_models/rob_performance_model</pElem>
+            <pElem>common/performance_model/performance_models/core_model</pElem>
+            <pElem>common/performance_model/performance_models/micro_op</pElem>
+            <pElem>common/performance_model/performance_models/interval_performance_model</pElem>
+            <pElem>common/performance_model/branch_predictors</pElem>
+            <pElem>common/performance_model/instruction_tracers</pElem>
+            <pElem>common/fault_injection</pElem>
+            <pElem>common/misc</pElem>
+            <pElem>common/config</pElem>
+            <pElem>common/transport</pElem>
+            <pElem>common/trace_frontend</pElem>
+            <pElem>include</pElem>
+            <pElem>pin_kit/extras/xed-intel64/include</pElem>
+            <pElem>pin_kit/extras/xed2-intel64/include</pElem>
+            <pElem>linux</pElem>
+            <pElem>sift</pElem>
+            <pElem>python_kit/intel64/include/python2.7</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="0/sift/recorder">
+        <ccTool>
+          <incDir>
+            <pElem>pin_kit/source/include/pin</pElem>
+            <pElem>pin_kit/source/include/pin/gen</pElem>
+            <pElem>pin_kit/extras/components/include</pElem>
+            <pElem>pin_kit/source/tools/InstLib</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>BIGARRAY_MULTIPLIER=1</Elem>
+            <Elem>HOST_IA32E</Elem>
+            <Elem>TARGET_IA32E</Elem>
+            <Elem>TARGET_LINUX</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <folder path="0/standalone">
+        <ccTool>
+          <incDir>
+            <pElem>common</pElem>
+            <pElem>common/user</pElem>
+            <pElem>common/sampling</pElem>
+            <pElem>common/core</pElem>
+            <pElem>common/core/memory_subsystem</pElem>
+            <pElem>common/core/memory_subsystem/cheetah</pElem>
+            <pElem>common/core/memory_subsystem/dram</pElem>
+            <pElem>common/core/memory_subsystem/directory_schemes</pElem>
+            <pElem>common/core/memory_subsystem/cache</pElem>
+            <pElem>common/core/memory_subsystem/fast_nehalem</pElem>
+            <pElem>common/core/memory_subsystem/pr_l1_pr_l2_dram_directory_msi</pElem>
+            <pElem>common/core/memory_subsystem/parametric_dram_directory_msi</pElem>
+            <pElem>common/scheduler</pElem>
+            <pElem>common/scripting</pElem>
+            <pElem>common/network</pElem>
+            <pElem>common/system</pElem>
+            <pElem>common/performance_model</pElem>
+            <pElem>common/performance_model/performance_models</pElem>
+            <pElem>common/performance_model/performance_models/rob_performance_model</pElem>
+            <pElem>common/performance_model/performance_models/core_model</pElem>
+            <pElem>common/performance_model/performance_models/micro_op</pElem>
+            <pElem>common/performance_model/performance_models/interval_performance_model</pElem>
+            <pElem>common/performance_model/branch_predictors</pElem>
+            <pElem>common/performance_model/instruction_tracers</pElem>
+            <pElem>common/fault_injection</pElem>
+            <pElem>common/misc</pElem>
+            <pElem>common/config</pElem>
+            <pElem>common/transport</pElem>
+            <pElem>common/trace_frontend</pElem>
+            <pElem>include</pElem>
+            <pElem>pin_kit/extras/xed-intel64/include</pElem>
+            <pElem>pin_kit/extras/xed2-intel64/include</pElem>
+            <pElem>linux</pElem>
+            <pElem>sift</pElem>
+            <pElem>python_kit/intel64/include/python2.7</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <item path="pin/codecache_trace.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="pin/follow_execv/follow_execv.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="pin/inst_mode.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="pin/instruction_modeling.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="pin/lite/handle_syscalls.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="pin/lite/memory_modeling.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="pin/lite/routine_replace.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="pin/local_storage.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="pin/pin_exceptions.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="pin/pin_lock.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="pin/pin_sim.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="pin/pin_thread.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="pin/pin_tls.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="pin/spin_loop_detection.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="pin/toolreg.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="pin/trace_rtn.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="sift/recorder/bbv_count.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="4">
+        </ccTool>
+      </item>
+      <item path="sift/recorder/emulation.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="4">
+        </ccTool>
+      </item>
+      <item path="sift/recorder/globals.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="4">
+        </ccTool>
+      </item>
+      <item path="sift/recorder/papi.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="4">
+        </ccTool>
+      </item>
+      <item path="sift/recorder/pinboost_debug.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="4">
+        </ccTool>
+      </item>
+      <item path="sift/recorder/recorder_base.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="4">
+        </ccTool>
+      </item>
+      <item path="sift/recorder/recorder_control.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="4">
+        </ccTool>
+      </item>
+      <item path="sift/recorder/sift_recorder.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="4">
+        </ccTool>
+      </item>
+      <item path="sift/recorder/syscall_modeling.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="4">
+        </ccTool>
+      </item>
+      <item path="sift/recorder/threads.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="4">
+        </ccTool>
+      </item>
+      <item path="sift/recorder/trace_rtn.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="4">
+        </ccTool>
+      </item>
+      <item path="sift/sift_reader.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="3">
+        </ccTool>
+      </item>
+      <item path="sift/sift_utils.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="3">
+        </ccTool>
+      </item>
+      <item path="sift/sift_writer.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="3">
+        </ccTool>
+      </item>
+      <item path="sift/siftdump.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="3">
+        </ccTool>
+      </item>
+      <item path="sift/zfstream.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="3">
+        </ccTool>
+      </item>
+      <item path="standalone/exceptions.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+        </ccTool>
+      </item>
+      <item path="standalone/standalone.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="1">
+        </ccTool>
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

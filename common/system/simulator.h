@@ -5,6 +5,10 @@
 #include "log.h"
 #include "inst_mode.h"
 
+//AMHM Start
+#define approx_table_max_entry 100
+//AMHM End
+
 
 class _Thread;
 class SyscallServer;
@@ -77,6 +81,17 @@ public:
 
    void setInstrumentationMode(InstMode::inst_mode_t new_mode, bool update_barrier);
    InstMode::inst_mode_t getInstrumentationMode() { return InstMode::inst_mode; }
+   
+   //AMHM Start
+   struct approximation {
+       unsigned long long int start_address;
+       unsigned long long int end_address;
+       double quality_level;
+   }approx_table[approx_table_max_entry];
+   int approx_table_search(unsigned long long start_address);
+   float get_error_rate(IntPtr address);
+   int approx_table_entry;
+   //AMHM End
 
 private:
    Config m_config;
