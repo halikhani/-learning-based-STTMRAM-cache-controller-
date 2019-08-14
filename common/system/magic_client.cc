@@ -53,7 +53,7 @@ UInt64 handleMagicInstruction(thread_id_t thread_id, UInt64 cmd, UInt64 arg0, UI
        return 0;
    case AMHM_QUAL:
        Sim()->approx_table[Sim()->approx_table_entry].quality_level = *(double*) &arg0;
-       printf("AMHM: Start Address Fed to Sniper: 0x%llx, End Address Fed to Sniper: 0x%llx, and Quality Level Fed to Sniper: %f\n",\
+       printf("AMHM: Start Address Fed to Sniper: 0x%llx, End Address Fed to Sniper: 0x%llx, and Quality Level Fed to Sniper: %e\n",\
               Sim()->approx_table[Sim()->approx_table_entry].start_address, Sim()->approx_table[Sim()->approx_table_entry].end_address,\
               Sim()->approx_table[Sim()->approx_table_entry].quality_level);
        return 0;

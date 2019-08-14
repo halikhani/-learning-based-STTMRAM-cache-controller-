@@ -9,12 +9,12 @@ int main()
    	fptr = fopen("./Output.txt","w");	
 	printf("This is the start of test program.\n");
 	long int vector[10000];
-	double ber = 0.2;
+	double ber = 0.00001;
 	printf("Program: Start Address %lx\n",(long long int)&(vector[0]));
 	printf("Program: End Address %lx\n",(long long int) (&vector[9999] + sizeof(long int) - 1));
 	AMHM_approx((long long int)&(vector[0]), (long long int) (&vector[9999] + sizeof(long int) - 1));
 	AMHM_qual(ToUnsignedInt(ber));
-	ber = 0.5;
+	ber = 0;
 	AMHM_approx((long long int)&(vector[100]), (long long int) (&vector[9999] + sizeof(long int) - 1));
 	AMHM_qual(ToUnsignedInt(ber));
 	ber = 0;

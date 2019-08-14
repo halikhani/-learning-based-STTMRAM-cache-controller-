@@ -89,7 +89,7 @@ public:
        double quality_level;
    }approx_table[approx_table_max_entry];
    int approx_table_search(unsigned long long start_address);
-   float get_error_rate(IntPtr address);
+   double get_error_rate(IntPtr address);
    int approx_table_entry;
    //AMHM End
 

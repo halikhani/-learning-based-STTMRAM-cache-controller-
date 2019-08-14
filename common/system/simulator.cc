@@ -230,7 +230,7 @@ int Simulator::approx_table_search(unsigned long long start_address) {
     return -1;
 }
 
-float Simulator::get_error_rate(IntPtr address) {
+double Simulator::get_error_rate(IntPtr address) {
     //printf("AMHM: Start Address Fed to search table: 0x%llx\n", start_address);
     for(int i = 0; i < approx_table_max_entry; i++)
                if((address >= (IntPtr) approx_table[i].start_address) && (address <= (IntPtr) approx_table[i].end_address))
