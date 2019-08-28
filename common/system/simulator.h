@@ -87,9 +87,13 @@ public:
        unsigned long long int start_address;
        unsigned long long int end_address;
        double quality_level;
+       UInt64 numberOfReads;
+       UInt64 numberOfWrites;
+       UInt64 numberOfInjectedFaults;
    }approx_table[approx_table_max_entry];
-   int approx_table_search(unsigned long long start_address);
+   signed int approx_table_search(IntPtr address);
    double get_error_rate(IntPtr address);
+   int approx_table_del(unsigned long long int start_address);
    int approx_table_entry;
    //AMHM End
 

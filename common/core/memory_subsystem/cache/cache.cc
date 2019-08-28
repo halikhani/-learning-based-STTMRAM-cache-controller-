@@ -1,6 +1,12 @@
 #include "simulator.h"
 #include "cache.h"
 #include "log.h"
+//AMHM Start
+#include <iostream>
+#include <fstream>
+using namespace std;
+#include <iomanip>
+//AMHM End
 
 // Cache class
 // constructors/destructors
@@ -54,6 +60,20 @@ Cache::~Cache()
    for (SInt32 i = 0; i < (SInt32) m_num_sets; i++)
       delete m_sets[i];
    delete [] m_sets;
+   //AMHM Start
+   ofstream outfile;
+   outfile.open("AMHM_FI_stats.log");
+   if(outfile && m_fault_injector) {
+       outfile << "Entry\t\t\t\tStart Address\t\t\tNumber of Reads\t\t\tNumber of Writes\t\t\tNumber of Injected Faults\n";
+       for(int i = 0; i < approx_table_max_entry; i++)
+           if (Sim()->approx_table[i].start_address != 0) {
+                outfile << i << setw(12) << "\t\t\t0x" << hex << setw(12) << Sim()->approx_table[i].start_address\
+                        << "\t\t\t" << dec << setw(12) << Sim()->approx_table[i].numberOfReads << "\t\t\t" << setw(12)\
+                        << Sim()->approx_table[i].numberOfWrites << "\t\t\t"\
+                        << setw(12) <<Sim()->approx_table[i].numberOfInjectedFaults << "\n";
+           }
+   }
+   //AMHM End
 }
 
 Lock&

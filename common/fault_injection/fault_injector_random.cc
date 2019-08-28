@@ -21,6 +21,9 @@ FaultInjectorRandom::preRead(IntPtr addr, IntPtr location, UInt32 data_size, Byt
 //    if(addr == (IntPtr) Sim()->approx_table[Sim()->approx_table_entry].start_address) {
 //           printf("AMHM: Yaftam.\n");
 //       }
+    signed int entry = Sim()->approx_table_search(addr);
+    if(entry != -1)
+           Sim()->approx_table[entry].numberOfReads++;
     
 }
 
@@ -33,11 +36,16 @@ FaultInjectorRandom::postWrite(IntPtr addr, IntPtr location, UInt32 data_size, B
    if (m_active)
    {
        double random_number = 0;
+       signed int entry = Sim()->approx_table_search(addr);
+       if(entry != -1)
+           Sim()->approx_table[entry].numberOfWrites++;
         //printf("error rate is %f\n",Sim()->get_error_rate(addr));
         for(UInt32 i = 0; i < data_size * 8; i++) {
             random_number = (double) rand() / RAND_MAX;
             if(random_number < Sim()->get_error_rate(addr)) {
                 //printf("Man Injam FI, random number= %e Error rate= %e.\n", random_number, Sim()->get_error_rate(addr));
+                if(entry != -1)
+                    Sim()->approx_table[entry].numberOfInjectedFaults++;
                 fault[i / 8] |= 1 << (i % 8);
 //                    printf("Inserting bit %d flip at address %" PRIxPTR " on read access by core %d to component %s\n",
 //                    i, addr, m_core_id, MemComponentString(m_mem_component));

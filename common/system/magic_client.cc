@@ -58,12 +58,10 @@ UInt64 handleMagicInstruction(thread_id_t thread_id, UInt64 cmd, UInt64 arg0, UI
               Sim()->approx_table[Sim()->approx_table_entry].quality_level);
        return 0;
    case AMHM_ACCURATE:
-       table_return = Sim()->approx_table_search((unsigned long long int) arg0);
+       table_return = Sim()->approx_table_del((unsigned long long int) arg0);
        if(table_return != -1) {
-            Sim()->approx_table[table_return].start_address = 0;
-            Sim()->approx_table[table_return].end_address = 0;
             Sim()->approx_table[table_return].quality_level = 0;
-            printf("AMHM: Address 0x%llx is removed from approximation table\n", (unsigned long long int) arg0);
+            printf("AMHM: Address 0x%llx is set to accurate mode\n", (unsigned long long int) arg0);
        }
        else
             printf("AMHM: Address 0x%llx is not found in approximation table\n", (unsigned long long int) arg0);
