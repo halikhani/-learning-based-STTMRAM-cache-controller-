@@ -95,6 +95,8 @@ public:
    double get_error_rate(IntPtr address);
    int approx_table_del(unsigned long long int start_address);
    int approx_table_entry;
+   long int numberOfL2Read;
+   long int numberOfL2Write;
    //AMHM End
 
 private:

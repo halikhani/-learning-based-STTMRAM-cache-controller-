@@ -21,9 +21,13 @@ FaultInjectorRandom::preRead(IntPtr addr, IntPtr location, UInt32 data_size, Byt
 //    if(addr == (IntPtr) Sim()->approx_table[Sim()->approx_table_entry].start_address) {
 //           printf("AMHM: Yaftam.\n");
 //       }
-    signed int entry = Sim()->approx_table_search(addr);
-    if(entry != -1)
-           Sim()->approx_table[entry].numberOfReads++;
+    if (m_active)
+    {
+        Sim()->numberOfL2Read++;
+        signed int entry = Sim()->approx_table_search(addr);
+        if(entry != -1)
+               Sim()->approx_table[entry].numberOfReads++;
+    }
     
 }
 
@@ -37,6 +41,7 @@ FaultInjectorRandom::postWrite(IntPtr addr, IntPtr location, UInt32 data_size, B
    {
        double random_number = 0;
        signed int entry = Sim()->approx_table_search(addr);
+       Sim()->numberOfL2Write++;
        if(entry != -1)
            Sim()->approx_table[entry].numberOfWrites++;
         //printf("error rate is %f\n",Sim()->get_error_rate(addr));

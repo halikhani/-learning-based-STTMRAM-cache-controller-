@@ -72,6 +72,9 @@ Cache::~Cache()
                         << Sim()->approx_table[i].numberOfWrites << "\t\t\t"\
                         << setw(12) <<Sim()->approx_table[i].numberOfInjectedFaults << "\n";
            }
+       outfile << "\n--------------------------------------------------------------------\n";
+       outfile << "Total number of reads in L2 cache = " << Sim()->numberOfL2Read << "\n";
+       outfile << "Total number of writes in L2 cache = " << Sim()->numberOfL2Write << "\n";
    }
    //AMHM End
 }

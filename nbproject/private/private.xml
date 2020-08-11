@@ -12,13 +12,8 @@
         <group>
             <file>file:/home/amir/sniper-mem/include/sim_api.h</file>
             <file>file:/home/amir/sniper-mem/test/memapproxAMHM/test.cc</file>
-            <file>file:/home/amir/sniper-mem/common/fault_injection/fault_injector_range.cc</file>
             <file>file:/home/amir/sniper-mem/test/memapproxAMHM/Makefile</file>
-            <file>file:/home/amir/sniper-mem/common/fault_injection/fault_injector_range.h</file>
-            <file>file:/home/amir/sniper-mem/test/memapprox/memapprox.cc</file>
             <file>file:/home/amir/sniper-mem/common/system/magic_server.cc</file>
-            <file>file:/home/amir/sniper-mem/.vscode/tasks.json</file>
-            <file>file:/home/amir/sniper-mem/test/memapprox/Makefile</file>
         </group>
     </open-files>
     <preferences xmlns="http://www.netbeans.org/ns/auxiliary-configuration-preferences/1">

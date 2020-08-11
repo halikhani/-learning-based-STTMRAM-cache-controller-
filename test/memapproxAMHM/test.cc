@@ -35,4 +35,5 @@ int main(int argc,char **argv)
 	fclose(fptr);
 	AMHM_accurate((long long int)&(vector[0]));
 	printf("This is the end of test program.\n");
+	return 0;
 }
