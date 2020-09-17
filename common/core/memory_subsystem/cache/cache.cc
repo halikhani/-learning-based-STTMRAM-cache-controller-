@@ -143,6 +143,8 @@ Cache::accessSingleLine(IntPtr addr, access_t access_type,
          m_fault_injector->preRead(addr, set_index * m_associativity + line_index, bytes, (Byte*)m_sets[set_index]->getDataPtr(line_index, block_offset), now);
 
       set->read_line(line_index, block_offset, buff, bytes, update_replacement);
+
+      fprintf(access_log,"%f,%ld,R\n", double(clock())/CLOCKS_PER_SEC, addr); /////////////// JA code
    }
    else
    {
@@ -151,6 +153,8 @@ Cache::accessSingleLine(IntPtr addr, access_t access_type,
       // NOTE: assumes error occurs in memory. If we want to model bus errors, insert the error into buff instead
       if (m_fault_injector)
          m_fault_injector->postWrite(addr, set_index * m_associativity + line_index, bytes, (Byte*)m_sets[set_index]->getDataPtr(line_index, block_offset), now);
+
+      fprintf(access_log,"%f,%ld,WB\n", double(clock())/CLOCKS_PER_SEC, addr); /////////////// JA code
    }
 
    return cache_block_info;
@@ -185,6 +189,8 @@ Cache::insertSingleLine(IntPtr addr, Byte* fill_buff,
    #ifdef ENABLE_SET_USAGE_HIST
    ++m_set_usage_hist[set_index];
    #endif
+
+   fprintf(access_log,"%f,%ld,W\n", double(clock())/CLOCKS_PER_SEC, addr); /////////////// JA code
 
    delete cache_block_info;
 }
