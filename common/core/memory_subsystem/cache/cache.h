@@ -11,6 +11,9 @@
 #include "log.h"
 #include "core.h"
 #include "fault_injection.h"
+/////////////// JA codes start
+#include <stdio.h>
+/////////////// end
 
 // Define to enable the set usage histogram
 //#define ENABLE_SET_USAGE_HIST
@@ -34,6 +37,9 @@ class Cache : public CacheBase
       #ifdef ENABLE_SET_USAGE_HIST
       UInt64* m_set_usage_hist;
       #endif
+      /////////////// JA codes start
+      FILE* access_log;
+      /////////////// end
 
    public:
 

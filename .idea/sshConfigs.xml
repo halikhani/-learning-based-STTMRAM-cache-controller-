@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="192.168.1.100" id="b3849918-2b08-447c-9d5e-7029239ec195" port="22" customName="Sniper-VM" nameFormat="CUSTOM" username="sniper">
+        <option name="customName" value="Sniper-VM" />
+      </sshConfig>
+    </configs>
+  </component>
+</project>

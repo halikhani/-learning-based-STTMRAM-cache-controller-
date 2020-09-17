@@ -7,6 +7,9 @@
 using namespace std;
 #include <iomanip>
 //AMHM End
+/////////////// JA codes start
+#include <time.h>
+/////////////// end
 
 // Cache class
 // constructors/destructors
@@ -42,6 +45,13 @@ Cache::Cache(
    for (UInt32 i = 0; i < m_num_sets; i++)
       m_set_usage_hist[i] = 0;
    #endif
+
+   /////////////// JA codes start
+   char buff[100];
+   sprintf(buff, "log_%s_core-%d.log", name.c_str(), core_id);
+   access_log = fopen(buff, "w");
+   fprintf(access_log, "time,hit\n");
+   /////////////// end
 }
 
 Cache::~Cache()
@@ -77,6 +87,10 @@ Cache::~Cache()
        outfile << "Total number of writes in L2 cache = " << Sim()->numberOfL2Write << "\n";
    }
    //AMHM End
+
+   /////////////// JA codes start
+   fclose(access_log);
+   /////////////// end
 }
 
 Lock&
@@ -193,8 +207,14 @@ Cache::updateCounters(bool cache_hit)
    if (m_enabled)
    {
       m_num_accesses ++;
-      if (cache_hit)
-         m_num_hits ++;
+      if (cache_hit) {
+          m_num_hits++;
+      /////////////// JA codes start
+         fprintf(access_log,"%f,1\n", double(clock())/CLOCKS_PER_SEC);
+      } else {
+         fprintf(access_log,"%f,0\n", double(clock())/CLOCKS_PER_SEC);
+      }
+       /////////////// end
    }
 }
 

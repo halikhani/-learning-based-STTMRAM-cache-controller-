@@ -6,6 +6,6 @@ $(TARGET): $(TARGET).o
 
 run_$(TARGET):
 	$(MAKE) -C ../../
-	../../run-sniper -c cacheonly.cfg --cache-only --roi -- ./test
+	../../run-sniper -c base.cfg -- ./test
 
 CLEAN_EXTRA=viz
